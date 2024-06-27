@@ -1,0 +1,168 @@
+m255
+K3
+13
+cModel Technology
+Z0 dE:\intelFPGA_lite\WorkSpace_21.1\acc_method\simulation\modelsim
+T_opt
+VU5IOPnkTYfoVO3l91[Kf82
+04 13 3 work acc_method_tb sim 1
+=1-3497f684196c-667c1f91-35d-49b4
+o-quiet -auto_acc_if_foreign -work work -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneive -L rtl_work -L work +acc
+n@_opt
+OL;O;10.1c;51
+Eacc_method
+Z1 w1719362290
+Z2 DPx4 ieee 15 std_logic_arith 0 22 4`Y?g_lkdn;7UL9IiJck01
+Z3 DPx4 ieee 18 std_logic_unsigned 0 22 RYmj;=TK`k=k>D@Cz`zoB3
+Z4 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+Z5 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z6 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z7 dE:\intelFPGA_lite\WorkSpace_21.1\acc_method\simulation\modelsim
+Z8 8E:/intelFPGA_lite/WorkSpace_21.1/acc_method/src/acc_method.vhd
+Z9 FE:/intelFPGA_lite/WorkSpace_21.1/acc_method/src/acc_method.vhd
+l0
+L8
+VU1I^mbNo<jjJj>C5>l4Yg1
+Z10 OL;C;10.1c;51
+31
+Z11 !s108 1719410575.647000
+Z12 !s90 -reportprogress|300|-93|-work|work|E:/intelFPGA_lite/WorkSpace_21.1/acc_method/src/acc_method.vhd|
+Z13 !s107 E:/intelFPGA_lite/WorkSpace_21.1/acc_method/src/acc_method.vhd|
+Z14 o-93 -work work
+Z15 tExplicit 1
+!s100 3a:29oJH2BBB8kD9?jINg3
+!i10b 1
+Aarch
+R2
+R3
+R4
+R5
+R6
+DEx4 work 10 acc_method 0 22 U1I^mbNo<jjJj>C5>l4Yg1
+l78
+L24
+V5zCmDN>BWZ3CIg7IoA4k82
+R10
+31
+R11
+R12
+R13
+R14
+R15
+!s100 @oGE`Dn[KUWAmf5iIdGzd1
+!i10b 1
+Eacc_method_tb
+Z16 w1719319951
+Z17 DPx3 std 3 env 0 22 kU@g3bh3dSQ6SKX7=V`LE3
+R4
+R5
+R6
+R7
+Z18 8E:/intelFPGA_lite/WorkSpace_21.1/acc_method/src/acc_method_tb.vhd
+Z19 FE:/intelFPGA_lite/WorkSpace_21.1/acc_method/src/acc_method_tb.vhd
+l0
+L9
+VTgoOmhGlC6:H=^C<ADg7e2
+R10
+31
+Z20 !s108 1719410576.875000
+Z21 !s90 -reportprogress|300|-93|-work|work|E:/intelFPGA_lite/WorkSpace_21.1/acc_method/src/acc_method_tb.vhd|
+Z22 !s107 E:/intelFPGA_lite/WorkSpace_21.1/acc_method/src/acc_method_tb.vhd|
+R14
+R15
+!s100 9>8nYZVHGU_8G=JK93[Ec3
+!i10b 1
+Asim
+R17
+R4
+R5
+R6
+DEx4 work 13 acc_method_tb 0 22 TgoOmhGlC6:H=^C<ADg7e2
+l44
+L12
+VjHG]1:?=P<d9_WR@Xl^k;0
+R10
+31
+R20
+R21
+R22
+R14
+R15
+!s100 Y2AWQQkZI5Se_DTo^T[I:3
+!i10b 1
+Edouble_adder
+Z23 w1719142366
+R2
+R3
+R5
+R6
+R7
+Z24 8E:/intelFPGA_lite/WorkSpace_21.1/acc_method/src/Double_Adder.vhd
+Z25 FE:/intelFPGA_lite/WorkSpace_21.1/acc_method/src/Double_Adder.vhd
+l0
+L12
+VKXjS<zCAlTgOVOK:d7cLW1
+R10
+31
+Z26 !s108 1719410576.013000
+Z27 !s90 -reportprogress|300|-93|-work|work|E:/intelFPGA_lite/WorkSpace_21.1/acc_method/src/Double_Adder.vhd|
+Z28 !s107 E:/intelFPGA_lite/WorkSpace_21.1/acc_method/src/Double_Adder.vhd|
+R14
+R15
+!s100 d[h4o;A<P2BJ_jS@:4FS53
+!i10b 1
+Abehavioral
+R2
+R3
+R5
+R6
+DEx4 work 12 double_adder 0 22 KXjS<zCAlTgOVOK:d7cLW1
+l36
+L27
+VVk8DAmof^_MQBl[V@hTgm0
+R10
+31
+R26
+R27
+R28
+R14
+R15
+!s100 Jc`3zMc=zkO>H<a1fm^<R3
+!i10b 1
+Erom_src_data
+Z29 w1719194665
+Z30 DPx9 altera_mf 20 altera_mf_components 0 22 C<>[5L^BLdOh3TJzQ];RG3
+R5
+R6
+R7
+Z31 8E:/intelFPGA_lite/WorkSpace_21.1/acc_method/src/Rom_Src_Data.vhd
+Z32 FE:/intelFPGA_lite/WorkSpace_21.1/acc_method/src/Rom_Src_Data.vhd
+l0
+L43
+Vi4Lm1;]lOnM<YN=GlAH_92
+R10
+31
+Z33 !s108 1719410576.348000
+Z34 !s90 -reportprogress|300|-93|-work|work|E:/intelFPGA_lite/WorkSpace_21.1/acc_method/src/Rom_Src_Data.vhd|
+Z35 !s107 E:/intelFPGA_lite/WorkSpace_21.1/acc_method/src/Rom_Src_Data.vhd|
+R14
+R15
+!s100 B]:43nnG92Z:8Ej@E<XoZ0
+!i10b 1
+Asyn
+R30
+R5
+R6
+DEx4 work 12 rom_src_data 0 22 i4Lm1;]lOnM<YN=GlAH_92
+l57
+L53
+VZ>S1h9WLI2Udjn42FlFG<1
+R10
+31
+R33
+R34
+R35
+R14
+R15
+!s100 VezMK[5CZDeeAHUzg@:9<3
+!i10b 1

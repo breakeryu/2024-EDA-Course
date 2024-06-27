@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Fri Jun 21 14:21:23 2024
+Quartus Prime Version : 21.1.1 Build 850 06/23/2022 SJ Lite Edition
+Revision Name : Double_Adder
+Top-level Entity Name : Double_Adder
+Family : Cyclone IV E
+Total logic elements : 1,049
+    Total combinational functions : 721
+    Dedicated logic registers : 683
+Total registers : 683
+Total pins : 381
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

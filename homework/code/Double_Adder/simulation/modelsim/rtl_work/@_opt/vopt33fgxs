@@ -1,0 +1,88 @@
+m255
+K3
+13
+cModel Technology
+Z0 dE:\intelFPGA_lite\WorkSpace_21.1\Double_Adder\simulation\modelsim
+T_opt
+VRIWRfW<7Uo?5Dh;2Y2;0l1
+04 15 3 work double_adder_tb sim 1
+=1-3497f684196c-667cb83d-188-4e44
+o-quiet -auto_acc_if_foreign -work work -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneive -L rtl_work -L work +acc
+n@_opt
+OL;O;10.1c;51
+Edouble_adder
+Z1 w1718969031
+Z2 DPx4 ieee 15 std_logic_arith 0 22 4`Y?g_lkdn;7UL9IiJck01
+Z3 DPx4 ieee 18 std_logic_unsigned 0 22 RYmj;=TK`k=k>D@Cz`zoB3
+Z4 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z5 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z6 dE:\intelFPGA_lite\WorkSpace_21.1\Double_Adder\simulation\modelsim
+Z7 8E:/intelFPGA_lite/WorkSpace_21.1/Double_Adder/src/Double_Adder.vhd
+Z8 FE:/intelFPGA_lite/WorkSpace_21.1/Double_Adder/src/Double_Adder.vhd
+l0
+L12
+VlcRdhfN7[We?1YY:C]2ec0
+Z9 OL;C;10.1c;51
+31
+Z10 !s108 1719449660.143000
+Z11 !s90 -reportprogress|300|-93|-work|work|E:/intelFPGA_lite/WorkSpace_21.1/Double_Adder/src/Double_Adder.vhd|
+Z12 !s107 E:/intelFPGA_lite/WorkSpace_21.1/Double_Adder/src/Double_Adder.vhd|
+Z13 o-93 -work work
+Z14 tExplicit 1
+!s100 <emhSX1?dUkW21Oz]UY8a1
+!i10b 1
+Abehavioral
+R2
+R3
+R4
+R5
+DEx4 work 12 double_adder 0 22 lcRdhfN7[We?1YY:C]2ec0
+l43
+L34
+VNa`mI[YH7n4<SKI[nz;m:3
+R9
+31
+R10
+R11
+R12
+R13
+R14
+!s100 <l4VVciDjPkVEg;7a3iE<3
+!i10b 1
+Edouble_adder_tb
+Z15 w1719449573
+Z16 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+R4
+R5
+R6
+Z17 8E:/intelFPGA_lite/WorkSpace_21.1/Double_Adder/src/Double_Adder_tb.vhd
+Z18 FE:/intelFPGA_lite/WorkSpace_21.1/Double_Adder/src/Double_Adder_tb.vhd
+l0
+L6
+VOH>RITjS1J^8eNK>dn>1h3
+R9
+31
+Z19 !s108 1719449660.610000
+Z20 !s90 -reportprogress|300|-93|-work|work|E:/intelFPGA_lite/WorkSpace_21.1/Double_Adder/src/Double_Adder_tb.vhd|
+Z21 !s107 E:/intelFPGA_lite/WorkSpace_21.1/Double_Adder/src/Double_Adder_tb.vhd|
+R13
+R14
+!s100 `A^TGaJO8IeRlAPO90E3>3
+!i10b 1
+Asim
+R16
+R4
+R5
+DEx4 work 15 double_adder_tb 0 22 OH>RITjS1J^8eNK>dn>1h3
+l49
+L9
+V8H1VJK1@YlY7Th8NMTT<o3
+R9
+31
+R19
+R20
+R21
+R13
+R14
+!s100 o@hm3iLZNQliBjX?;[mWj3
+!i10b 1

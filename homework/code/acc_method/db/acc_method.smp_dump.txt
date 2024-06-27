@@ -1,0 +1,8 @@
+
+State Machine - |acc_method|State
+Name State.Adder_P4 State.Adder_P3 State.Adder_P2 State.Adder_P1 State.Init_Adder 
+State.Init_Adder 0 0 0 0 0 
+State.Adder_P1 0 0 0 1 1 
+State.Adder_P2 0 0 1 0 1 
+State.Adder_P3 0 1 0 0 1 
+State.Adder_P4 1 0 0 0 1 

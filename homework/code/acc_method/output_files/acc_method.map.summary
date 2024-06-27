@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Wed Jun 26 08:38:25 2024
+Quartus Prime Version : 21.1.1 Build 850 06/23/2022 SJ Lite Edition
+Revision Name : acc_method
+Top-level Entity Name : acc_method
+Family : Cyclone IV E
+Total logic elements : 1,646
+    Total combinational functions : 1,129
+    Dedicated logic registers : 1,133
+Total registers : 1133
+Total pins : 342
+Total virtual pins : 0
+Total memory bits : 512,000
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

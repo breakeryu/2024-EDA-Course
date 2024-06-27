@@ -1,0 +1,600 @@
+Analysis & Synthesis report for acc_method
+Wed Jun 26 08:38:25 2024
+Quartus Prime Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis RAM Summary
+  9. Analysis & Synthesis IP Cores Summary
+ 10. State Machine - |acc_method|State
+ 11. Registers Removed During Synthesis
+ 12. Removed Registers Triggering Further Register Optimizations
+ 13. General Register Statistics
+ 14. Inverted Register Statistics
+ 15. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 16. Source assignments for Rom_Src_Data:m_Rom_Src_Data|altsyncram:altsyncram_component|altsyncram_nhv3:auto_generated
+ 17. Parameter Settings for User Entity Instance: Rom_Src_Data:m_Rom_Src_Data|altsyncram:altsyncram_component
+ 18. altsyncram Parameter Settings by Entity Instance
+ 19. Post-Synthesis Netlist Statistics for Top Partition
+ 20. Elapsed Time Per Partition
+ 21. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2022  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Wed Jun 26 08:38:25 2024       ;
+; Quartus Prime Version              ; 21.1.1 Build 850 06/23/2022 SJ Lite Edition ;
+; Revision Name                      ; acc_method                                  ;
+; Top-level Entity Name              ; acc_method                                  ;
+; Family                             ; Cyclone IV E                                ;
+; Total logic elements               ; 1,646                                       ;
+;     Total combinational functions  ; 1,129                                       ;
+;     Dedicated logic registers      ; 1,133                                       ;
+; Total registers                    ; 1133                                        ;
+; Total pins                         ; 342                                         ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 512,000                                     ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; EP4CE30F23C6       ;                    ;
+; Top-level entity name                                            ; acc_method         ; acc_method         ;
+; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.1%      ;
+;     Processor 3            ;   0.1%      ;
+;     Processor 4            ;   0.1%      ;
++----------------------------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                               ;
++----------------------------------+-----------------+----------------------------------------+------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                                 ; Library ;
++----------------------------------+-----------------+----------------------------------------+------------------------------------------------------------------------------+---------+
+; src/acc_method.vhd               ; yes             ; User VHDL File                         ; E:/intelFPGA_lite/WorkSpace_21.1/acc_method/src/acc_method.vhd               ;         ;
+; src/Double_Adder.vhd             ; yes             ; User VHDL File                         ; E:/intelFPGA_lite/WorkSpace_21.1/acc_method/src/Double_Adder.vhd             ;         ;
+; src/Rom_Src_Data.vhd             ; yes             ; User Wizard-Generated File             ; E:/intelFPGA_lite/WorkSpace_21.1/acc_method/src/Rom_Src_Data.vhd             ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                           ; e:/intelfpga_lite/21.1/quartus/libraries/megafunctions/altsyncram.tdf        ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                           ; e:/intelfpga_lite/21.1/quartus/libraries/megafunctions/stratix_ram_block.inc ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                           ; e:/intelfpga_lite/21.1/quartus/libraries/megafunctions/lpm_mux.inc           ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                           ; e:/intelfpga_lite/21.1/quartus/libraries/megafunctions/lpm_decode.inc        ;         ;
+; aglobal211.inc                   ; yes             ; Megafunction                           ; e:/intelfpga_lite/21.1/quartus/libraries/megafunctions/aglobal211.inc        ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                           ; e:/intelfpga_lite/21.1/quartus/libraries/megafunctions/a_rdenreg.inc         ;         ;
+; altrom.inc                       ; yes             ; Megafunction                           ; e:/intelfpga_lite/21.1/quartus/libraries/megafunctions/altrom.inc            ;         ;
+; altram.inc                       ; yes             ; Megafunction                           ; e:/intelfpga_lite/21.1/quartus/libraries/megafunctions/altram.inc            ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                           ; e:/intelfpga_lite/21.1/quartus/libraries/megafunctions/altdpram.inc          ;         ;
+; db/altsyncram_nhv3.tdf           ; yes             ; Auto-Generated Megafunction            ; E:/intelFPGA_lite/WorkSpace_21.1/acc_method/db/altsyncram_nhv3.tdf           ;         ;
+; src/data1.mif                    ; yes             ; Auto-Found Memory Initialization File  ; E:/intelFPGA_lite/WorkSpace_21.1/acc_method/src/data1.mif                    ;         ;
++----------------------------------+-----------------+----------------------------------------+------------------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary               ;
++---------------------------------------------+-------------+
+; Resource                                    ; Usage       ;
++---------------------------------------------+-------------+
+; Estimated Total logic elements              ; 1,646       ;
+;                                             ;             ;
+; Total combinational functions               ; 1129        ;
+; Logic element usage by number of LUT inputs ;             ;
+;     -- 4 input functions                    ; 298         ;
+;     -- 3 input functions                    ; 536         ;
+;     -- <=2 input functions                  ; 295         ;
+;                                             ;             ;
+; Logic elements by mode                      ;             ;
+;     -- normal mode                          ; 928         ;
+;     -- arithmetic mode                      ; 201         ;
+;                                             ;             ;
+; Total registers                             ; 1133        ;
+;     -- Dedicated logic registers            ; 1133        ;
+;     -- I/O registers                        ; 0           ;
+;                                             ;             ;
+; I/O pins                                    ; 342         ;
+; Total memory bits                           ; 512000      ;
+;                                             ;             ;
+; Embedded Multiplier 9-bit elements          ; 0           ;
+;                                             ;             ;
+; Maximum fan-out node                        ; Clock~input ;
+; Maximum fan-out                             ; 1197        ;
+; Total fan-out                               ; 9030        ;
+; Average fan-out                             ; 3.00        ;
++---------------------------------------------+-------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                            ;
++-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------+-----------------+--------------+
+; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                    ; Entity Name     ; Library Name ;
++-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------+-----------------+--------------+
+; |acc_method                               ; 1129 (274)          ; 1133 (637)                ; 512000      ; 0            ; 0       ; 0         ; 342  ; 0            ; |acc_method                                                                                            ; acc_method      ; work         ;
+;    |Double_Adder:m_Double_Adder|          ; 855 (855)           ; 496 (496)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |acc_method|Double_Adder:m_Double_Adder                                                                ; Double_Adder    ; work         ;
+;    |Rom_Src_Data:m_Rom_Src_Data|          ; 0 (0)               ; 0 (0)                     ; 512000      ; 0            ; 0       ; 0         ; 0    ; 0            ; |acc_method|Rom_Src_Data:m_Rom_Src_Data                                                                ; Rom_Src_Data    ; work         ;
+;       |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 512000      ; 0            ; 0       ; 0         ; 0    ; 0            ; |acc_method|Rom_Src_Data:m_Rom_Src_Data|altsyncram:altsyncram_component                                ; altsyncram      ; work         ;
+;          |altsyncram_nhv3:auto_generated| ; 0 (0)               ; 0 (0)                     ; 512000      ; 0            ; 0       ; 0         ; 0    ; 0            ; |acc_method|Rom_Src_Data:m_Rom_Src_Data|altsyncram:altsyncram_component|altsyncram_nhv3:auto_generated ; altsyncram_nhv3 ; work         ;
++-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------+-----------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                                                                     ;
++-------------------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+--------+-----------------------------------------------------------+
+; Name                                                                                                  ; Type ; Mode ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size   ; MIF                                                       ;
++-------------------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+--------+-----------------------------------------------------------+
+; Rom_Src_Data:m_Rom_Src_Data|altsyncram:altsyncram_component|altsyncram_nhv3:auto_generated|ALTSYNCRAM ; AUTO ; ROM  ; 8000         ; 64           ; --           ; --           ; 512000 ; E:/intelFPGA_lite/WorkSpace_21.1/acc_method/src/data1.mif ;
++-------------------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+--------+-----------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis IP Cores Summary                                                                                          ;
++--------+--------------+---------+--------------+--------------+-----------------------------------------+----------------------+
+; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance                         ; IP Include File      ;
++--------+--------------+---------+--------------+--------------+-----------------------------------------+----------------------+
+; Altera ; ROM: 1-PORT  ; 21.1    ; N/A          ; N/A          ; |acc_method|Rom_Src_Data:m_Rom_Src_Data ; src/Rom_Src_Data.vhd ;
++--------+--------------+---------+--------------+--------------+-----------------------------------------+----------------------+
+
+
+Encoding Type:  One-Hot
++---------------------------------------------------------------------------------------------------------+
+; State Machine - |acc_method|State                                                                       ;
++------------------+----------------+----------------+----------------+----------------+------------------+
+; Name             ; State.Adder_P4 ; State.Adder_P3 ; State.Adder_P2 ; State.Adder_P1 ; State.Init_Adder ;
++------------------+----------------+----------------+----------------+----------------+------------------+
+; State.Init_Adder ; 0              ; 0              ; 0              ; 0              ; 0                ;
+; State.Adder_P1   ; 0              ; 0              ; 0              ; 1              ; 1                ;
+; State.Adder_P2   ; 0              ; 0              ; 1              ; 0              ; 1                ;
+; State.Adder_P3   ; 0              ; 1              ; 0              ; 0              ; 1                ;
+; State.Adder_P4   ; 1              ; 0              ; 0              ; 0              ; 1                ;
++------------------+----------------+----------------+----------------+----------------+------------------+
+
+
++------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                   ;
++-------------------------------------------------+----------------------------------------------------+
+; Register name                                   ; Reason for Removal                                 ;
++-------------------------------------------------+----------------------------------------------------+
+; sclk_count[5]~reg0                              ; Stuck at GND due to stuck port data_in             ;
+; Double_Adder:m_Double_Adder|symbol[1..9,11..30] ; Merged with Double_Adder:m_Double_Adder|symbol[10] ;
+; Double_Adder:m_Double_Adder|N[12..30]           ; Merged with Double_Adder:m_Double_Adder|N[11]      ;
+; Double_Adder:m_Double_Adder|symbol[10]          ; Stuck at GND due to stuck port data_in             ;
+; Double_Adder:m_Double_Adder|N[11]               ; Stuck at GND due to stuck port data_in             ;
+; Double_Adder:m_Double_Adder|clock_count[3]      ; Stuck at GND due to stuck port data_in             ;
+; Double_Adder:m_Double_Adder|symbol[31]          ; Stuck at GND due to stuck port data_in             ;
+; Double_Adder:m_Double_Adder|N[31]               ; Stuck at GND due to stuck port data_in             ;
+; Total Number of Removed Registers = 54          ;                                                    ;
++-------------------------------------------------+----------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                        ;
++--------------------------------------------+---------------------------+---------------------------------------------------------------------------+
+; Register name                              ; Reason for Removal        ; Registers Removed due to This Register                                    ;
++--------------------------------------------+---------------------------+---------------------------------------------------------------------------+
+; Double_Adder:m_Double_Adder|clock_count[3] ; Stuck at GND              ; Double_Adder:m_Double_Adder|symbol[31], Double_Adder:m_Double_Adder|N[31] ;
+;                                            ; due to stuck port data_in ;                                                                           ;
++--------------------------------------------+---------------------------+---------------------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 1133  ;
+; Number of registers using Synchronous Clear  ; 89    ;
+; Number of registers using Synchronous Load   ; 95    ;
+; Number of registers using Asynchronous Clear ; 496   ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 1060  ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; adder_reset                            ; 498     ;
+; Total number of inverted registers = 1 ;         ;
++----------------------------------------+---------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
+; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |acc_method|addr_count[5]                              ;
+; 3:1                ; 128 bits  ; 256 LEs       ; 128 LEs              ; 128 LEs                ; Yes        ; |acc_method|Double_Adder:m_Double_Adder|B_f[37]        ;
+; 3:1                ; 128 bits  ; 256 LEs       ; 128 LEs              ; 128 LEs                ; Yes        ; |acc_method|adder_Data_In2[48]                         ;
+; 3:1                ; 53 bits   ; 106 LEs       ; 0 LEs                ; 106 LEs                ; Yes        ; |acc_method|Double_Adder:m_Double_Adder|A_f2[47]       ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |acc_method|rom_wait_clk[1]                            ;
+; 4:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |acc_method|Double_Adder:m_Double_Adder|N[6]           ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |acc_method|pluse_number[2]                            ;
+; 4:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |acc_method|acc_result_e[5]                            ;
+; 17:1               ; 3 bits    ; 33 LEs        ; 18 LEs               ; 15 LEs                 ; Yes        ; |acc_method|Double_Adder:m_Double_Adder|clock_count[0] ;
+; 11:1               ; 63 bits   ; 441 LEs       ; 63 LEs               ; 378 LEs                ; Yes        ; |acc_method|Double_Adder:m_Double_Adder|Y[12]          ;
+; 6:1                ; 3 bits    ; 12 LEs        ; 3 LEs                ; 9 LEs                  ; Yes        ; |acc_method|rom_address[10]                            ;
+; 6:1                ; 7 bits    ; 28 LEs        ; 7 LEs                ; 21 LEs                 ; Yes        ; |acc_method|rom_address[7]                             ;
+; 8:1                ; 5 bits    ; 25 LEs        ; 15 LEs               ; 10 LEs                 ; Yes        ; |acc_method|Double_Adder:m_Double_Adder|B_f2[33]       ;
+; 8:1                ; 5 bits    ; 25 LEs        ; 15 LEs               ; 10 LEs                 ; Yes        ; |acc_method|Double_Adder:m_Double_Adder|B_f2[18]       ;
+; 7:1                ; 5 bits    ; 20 LEs        ; 5 LEs                ; 15 LEs                 ; Yes        ; |acc_method|clk_count[0]                               ;
+; 12:1               ; 11 bits   ; 88 LEs        ; 11 LEs               ; 77 LEs                 ; Yes        ; |acc_method|Double_Adder:m_Double_Adder|Y_e[10]        ;
+; 13:1               ; 52 bits   ; 416 LEs       ; 104 LEs              ; 312 LEs                ; Yes        ; |acc_method|Double_Adder:m_Double_Adder|Y_fn[1]        ;
+; 9:1                ; 8 bits    ; 48 LEs        ; 32 LEs               ; 16 LEs                 ; Yes        ; |acc_method|Double_Adder:m_Double_Adder|B_f2[37]       ;
+; 9:1                ; 11 bits   ; 66 LEs        ; 33 LEs               ; 33 LEs                 ; Yes        ; |acc_method|Double_Adder:m_Double_Adder|B_f2[23]       ;
+; 9:1                ; 8 bits    ; 48 LEs        ; 32 LEs               ; 16 LEs                 ; Yes        ; |acc_method|Double_Adder:m_Double_Adder|B_f2[11]       ;
+; 10:1               ; 4 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |acc_method|Double_Adder:m_Double_Adder|B_f2[48]       ;
+; 10:1               ; 4 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |acc_method|Double_Adder:m_Double_Adder|B_f2[4]        ;
+; 11:1               ; 2 bits    ; 14 LEs        ; 10 LEs               ; 4 LEs                  ; Yes        ; |acc_method|Double_Adder:m_Double_Adder|B_f2[49]       ;
+; 11:1               ; 2 bits    ; 14 LEs        ; 10 LEs               ; 4 LEs                  ; Yes        ; |acc_method|Double_Adder:m_Double_Adder|B_f2[2]        ;
+; 12:1               ; 2 bits    ; 16 LEs        ; 12 LEs               ; 4 LEs                  ; Yes        ; |acc_method|Double_Adder:m_Double_Adder|B_f2[0]        ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 8 LEs                ; 2 LEs                  ; No         ; |acc_method|State                                      ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; No         ; |acc_method|State                                      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Source assignments for Rom_Src_Data:m_Rom_Src_Data|altsyncram:altsyncram_component|altsyncram_nhv3:auto_generated ;
++---------------------------------+--------------------+------+-----------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                  ;
++---------------------------------+--------------------+------+-----------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                   ;
++---------------------------------+--------------------+------+-----------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Rom_Src_Data:m_Rom_Src_Data|altsyncram:altsyncram_component        ;
++------------------------------------+-----------------------------------------------------------+----------------+
+; Parameter Name                     ; Value                                                     ; Type           ;
++------------------------------------+-----------------------------------------------------------+----------------+
+; BYTE_SIZE_BLOCK                    ; 8                                                         ; Untyped        ;
+; AUTO_CARRY_CHAINS                  ; ON                                                        ; AUTO_CARRY     ;
+; IGNORE_CARRY_BUFFERS               ; OFF                                                       ; IGNORE_CARRY   ;
+; AUTO_CASCADE_CHAINS                ; ON                                                        ; AUTO_CASCADE   ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                                                       ; IGNORE_CASCADE ;
+; WIDTH_BYTEENA                      ; 1                                                         ; Untyped        ;
+; OPERATION_MODE                     ; ROM                                                       ; Untyped        ;
+; WIDTH_A                            ; 64                                                        ; Signed Integer ;
+; WIDTHAD_A                          ; 13                                                        ; Signed Integer ;
+; NUMWORDS_A                         ; 8000                                                      ; Signed Integer ;
+; OUTDATA_REG_A                      ; CLOCK0                                                    ; Untyped        ;
+; ADDRESS_ACLR_A                     ; NONE                                                      ; Untyped        ;
+; OUTDATA_ACLR_A                     ; NONE                                                      ; Untyped        ;
+; WRCONTROL_ACLR_A                   ; NONE                                                      ; Untyped        ;
+; INDATA_ACLR_A                      ; NONE                                                      ; Untyped        ;
+; BYTEENA_ACLR_A                     ; NONE                                                      ; Untyped        ;
+; WIDTH_B                            ; 1                                                         ; Signed Integer ;
+; WIDTHAD_B                          ; 1                                                         ; Signed Integer ;
+; NUMWORDS_B                         ; 0                                                         ; Signed Integer ;
+; INDATA_REG_B                       ; CLOCK1                                                    ; Untyped        ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1                                                    ; Untyped        ;
+; RDCONTROL_REG_B                    ; CLOCK1                                                    ; Untyped        ;
+; ADDRESS_REG_B                      ; CLOCK1                                                    ; Untyped        ;
+; OUTDATA_REG_B                      ; UNREGISTERED                                              ; Untyped        ;
+; BYTEENA_REG_B                      ; CLOCK1                                                    ; Untyped        ;
+; INDATA_ACLR_B                      ; NONE                                                      ; Untyped        ;
+; WRCONTROL_ACLR_B                   ; NONE                                                      ; Untyped        ;
+; ADDRESS_ACLR_B                     ; NONE                                                      ; Untyped        ;
+; OUTDATA_ACLR_B                     ; NONE                                                      ; Untyped        ;
+; RDCONTROL_ACLR_B                   ; NONE                                                      ; Untyped        ;
+; BYTEENA_ACLR_B                     ; NONE                                                      ; Untyped        ;
+; WIDTH_BYTEENA_A                    ; 1                                                         ; Signed Integer ;
+; WIDTH_BYTEENA_B                    ; 1                                                         ; Signed Integer ;
+; RAM_BLOCK_TYPE                     ; AUTO                                                      ; Untyped        ;
+; BYTE_SIZE                          ; 8                                                         ; Signed Integer ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                 ; Untyped        ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ                                      ; Untyped        ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ                                      ; Untyped        ;
+; INIT_FILE                          ; E:/intelFPGA_lite/WorkSpace_21.1/acc_method/src/data1.mif ; Untyped        ;
+; INIT_FILE_LAYOUT                   ; PORT_A                                                    ; Untyped        ;
+; MAXIMUM_DEPTH                      ; 0                                                         ; Signed Integer ;
+; CLOCK_ENABLE_INPUT_A               ; BYPASS                                                    ; Untyped        ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL                                                    ; Untyped        ;
+; CLOCK_ENABLE_OUTPUT_A              ; BYPASS                                                    ; Untyped        ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL                                                    ; Untyped        ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN                                           ; Untyped        ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN                                           ; Untyped        ;
+; ENABLE_ECC                         ; FALSE                                                     ; Untyped        ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                                                     ; Untyped        ;
+; WIDTH_ECCSTATUS                    ; 3                                                         ; Signed Integer ;
+; DEVICE_FAMILY                      ; Cyclone IV E                                              ; Untyped        ;
+; CBXI_PARAMETER                     ; altsyncram_nhv3                                           ; Untyped        ;
++------------------------------------+-----------------------------------------------------------+----------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------+
+; altsyncram Parameter Settings by Entity Instance                                                        ;
++-------------------------------------------+-------------------------------------------------------------+
+; Name                                      ; Value                                                       ;
++-------------------------------------------+-------------------------------------------------------------+
+; Number of entity instances                ; 1                                                           ;
+; Entity Instance                           ; Rom_Src_Data:m_Rom_Src_Data|altsyncram:altsyncram_component ;
+;     -- OPERATION_MODE                     ; ROM                                                         ;
+;     -- WIDTH_A                            ; 64                                                          ;
+;     -- NUMWORDS_A                         ; 8000                                                        ;
+;     -- OUTDATA_REG_A                      ; CLOCK0                                                      ;
+;     -- WIDTH_B                            ; 1                                                           ;
+;     -- NUMWORDS_B                         ; 0                                                           ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                                      ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                                ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                                        ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                   ;
++-------------------------------------------+-------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 342                         ;
+; cycloneiii_ff         ; 1133                        ;
+;     CLR               ; 2                           ;
+;     ENA               ; 530                         ;
+;     ENA CLR           ; 412                         ;
+;     ENA CLR SCLR      ; 4                           ;
+;     ENA CLR SCLR SLD  ; 4                           ;
+;     ENA CLR SLD       ; 74                          ;
+;     ENA SCLR          ; 15                          ;
+;     ENA SLD           ; 21                          ;
+;     SCLR              ; 66                          ;
+;     plain             ; 5                           ;
+; cycloneiii_lcell_comb ; 1129                        ;
+;     arith             ; 201                         ;
+;         1 data inputs ; 21                          ;
+;         2 data inputs ; 102                         ;
+;         3 data inputs ; 78                          ;
+;     normal            ; 928                         ;
+;         0 data inputs ; 4                           ;
+;         1 data inputs ; 8                           ;
+;         2 data inputs ; 160                         ;
+;         3 data inputs ; 458                         ;
+;         4 data inputs ; 298                         ;
+; cycloneiii_ram_block  ; 64                          ;
+;                       ;                             ;
+; Max LUT depth         ; 11.00                       ;
+; Average LUT depth     ; 2.97                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:03     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
+    Info: Processing started: Wed Jun 26 08:38:13 2024
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off acc_method -c acc_method
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file src/acc_method.vhd
+    Info (12022): Found design unit 1: acc_method-arch File: E:/intelFPGA_lite/WorkSpace_21.1/acc_method/src/acc_method.vhd Line: 24
+    Info (12023): Found entity 1: acc_method File: E:/intelFPGA_lite/WorkSpace_21.1/acc_method/src/acc_method.vhd Line: 8
+Info (12021): Found 2 design units, including 1 entities, in source file src/double_adder.vhd
+    Info (12022): Found design unit 1: Double_Adder-behavioral File: E:/intelFPGA_lite/WorkSpace_21.1/acc_method/src/Double_Adder.vhd Line: 27
+    Info (12023): Found entity 1: Double_Adder File: E:/intelFPGA_lite/WorkSpace_21.1/acc_method/src/Double_Adder.vhd Line: 12
+Info (12021): Found 2 design units, including 1 entities, in source file src/rom_src_data.vhd
+    Info (12022): Found design unit 1: rom_src_data-SYN File: E:/intelFPGA_lite/WorkSpace_21.1/acc_method/src/Rom_Src_Data.vhd Line: 53
+    Info (12023): Found entity 1: Rom_Src_Data File: E:/intelFPGA_lite/WorkSpace_21.1/acc_method/src/Rom_Src_Data.vhd Line: 43
+Info (12127): Elaborating entity "acc_method" for the top level hierarchy
+Info (12128): Elaborating entity "Rom_Src_Data" for hierarchy "Rom_Src_Data:m_Rom_Src_Data" File: E:/intelFPGA_lite/WorkSpace_21.1/acc_method/src/acc_method.vhd Line: 81
+Info (12128): Elaborating entity "altsyncram" for hierarchy "Rom_Src_Data:m_Rom_Src_Data|altsyncram:altsyncram_component" File: E:/intelFPGA_lite/WorkSpace_21.1/acc_method/src/Rom_Src_Data.vhd Line: 60
+Info (12130): Elaborated megafunction instantiation "Rom_Src_Data:m_Rom_Src_Data|altsyncram:altsyncram_component" File: E:/intelFPGA_lite/WorkSpace_21.1/acc_method/src/Rom_Src_Data.vhd Line: 60
+Info (12133): Instantiated megafunction "Rom_Src_Data:m_Rom_Src_Data|altsyncram:altsyncram_component" with the following parameter: File: E:/intelFPGA_lite/WorkSpace_21.1/acc_method/src/Rom_Src_Data.vhd Line: 60
+    Info (12134): Parameter "address_aclr_a" = "NONE"
+    Info (12134): Parameter "address_aclr_b" = "NONE"
+    Info (12134): Parameter "address_reg_b" = "CLOCK1"
+    Info (12134): Parameter "byte_size" = "8"
+    Info (12134): Parameter "byteena_aclr_a" = "UNUSED"
+    Info (12134): Parameter "byteena_aclr_b" = "NONE"
+    Info (12134): Parameter "byteena_reg_b" = "CLOCK1"
+    Info (12134): Parameter "clock_enable_core_a" = "USE_INPUT_CLKEN"
+    Info (12134): Parameter "clock_enable_core_b" = "USE_INPUT_CLKEN"
+    Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_input_b" = "NORMAL"
+    Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_output_b" = "NORMAL"
+    Info (12134): Parameter "intended_device_family" = "Cyclone IV E"
+    Info (12134): Parameter "ecc_pipeline_stage_enabled" = "FALSE"
+    Info (12134): Parameter "enable_ecc" = "FALSE"
+    Info (12134): Parameter "implement_in_les" = "OFF"
+    Info (12134): Parameter "indata_aclr_a" = "UNUSED"
+    Info (12134): Parameter "indata_aclr_b" = "NONE"
+    Info (12134): Parameter "indata_reg_b" = "CLOCK1"
+    Info (12134): Parameter "init_file" = "E:/intelFPGA_lite/WorkSpace_21.1/acc_method/src/data1.mif"
+    Info (12134): Parameter "init_file_layout" = "PORT_A"
+    Info (12134): Parameter "maximum_depth" = "0"
+    Info (12134): Parameter "numwords_a" = "8000"
+    Info (12134): Parameter "numwords_b" = "0"
+    Info (12134): Parameter "operation_mode" = "ROM"
+    Info (12134): Parameter "outdata_aclr_a" = "NONE"
+    Info (12134): Parameter "outdata_aclr_b" = "NONE"
+    Info (12134): Parameter "outdata_reg_a" = "CLOCK0"
+    Info (12134): Parameter "outdata_reg_b" = "UNREGISTERED"
+    Info (12134): Parameter "power_up_uninitialized" = "FALSE"
+    Info (12134): Parameter "ram_block_type" = "AUTO"
+    Info (12134): Parameter "rdcontrol_aclr_b" = "NONE"
+    Info (12134): Parameter "rdcontrol_reg_b" = "CLOCK1"
+    Info (12134): Parameter "read_during_write_mode_mixed_ports" = "DONT_CARE"
+    Info (12134): Parameter "read_during_write_mode_port_a" = "NEW_DATA_NO_NBE_READ"
+    Info (12134): Parameter "read_during_write_mode_port_b" = "NEW_DATA_NO_NBE_READ"
+    Info (12134): Parameter "stratixiv_m144k_allow_dual_clocks" = "ON"
+    Info (12134): Parameter "width_a" = "64"
+    Info (12134): Parameter "width_b" = "1"
+    Info (12134): Parameter "width_byteena_a" = "1"
+    Info (12134): Parameter "width_byteena_b" = "1"
+    Info (12134): Parameter "width_eccstatus" = "3"
+    Info (12134): Parameter "widthad_a" = "13"
+    Info (12134): Parameter "widthad_b" = "1"
+    Info (12134): Parameter "wrcontrol_aclr_a" = "UNUSED"
+    Info (12134): Parameter "wrcontrol_aclr_b" = "NONE"
+    Info (12134): Parameter "wrcontrol_wraddress_reg_b" = "CLOCK1"
+    Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
+    Info (12134): Parameter "lpm_type" = "altsyncram"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_nhv3.tdf
+    Info (12023): Found entity 1: altsyncram_nhv3 File: E:/intelFPGA_lite/WorkSpace_21.1/acc_method/db/altsyncram_nhv3.tdf Line: 28
+Info (12128): Elaborating entity "altsyncram_nhv3" for hierarchy "Rom_Src_Data:m_Rom_Src_Data|altsyncram:altsyncram_component|altsyncram_nhv3:auto_generated" File: e:/intelfpga_lite/21.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
+Info (12128): Elaborating entity "Double_Adder" for hierarchy "Double_Adder:m_Double_Adder" File: E:/intelFPGA_lite/WorkSpace_21.1/acc_method/src/acc_method.vhd Line: 89
+Warning (10492): VHDL Process Statement warning at Double_Adder.vhd(71): signal "Valid" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/intelFPGA_lite/WorkSpace_21.1/acc_method/src/Double_Adder.vhd Line: 71
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "sclk_count[5]" is stuck at GND File: E:/intelFPGA_lite/WorkSpace_21.1/acc_method/src/acc_method.vhd Line: 110
+Info (286030): Timing-Driven Synthesis is running
+Critical Warning (18061): Ignored Power-Up Level option on the following registers
+    Critical Warning (18010): Register Double_Adder:m_Double_Adder|symbol[0] will power up to Low File: E:/intelFPGA_lite/WorkSpace_21.1/acc_method/src/Double_Adder.vhd Line: 45
+    Critical Warning (18010): Register Double_Adder:m_Double_Adder|symbol[31] will power up to Low File: E:/intelFPGA_lite/WorkSpace_21.1/acc_method/src/Double_Adder.vhd Line: 45
+    Critical Warning (18010): Register Double_Adder:m_Double_Adder|N[0] will power up to Low File: E:/intelFPGA_lite/WorkSpace_21.1/acc_method/src/Double_Adder.vhd Line: 45
+    Critical Warning (18010): Register Double_Adder:m_Double_Adder|N[31] will power up to Low File: E:/intelFPGA_lite/WorkSpace_21.1/acc_method/src/Double_Adder.vhd Line: 45
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 2054 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 2 input pins
+    Info (21059): Implemented 340 output pins
+    Info (21061): Implemented 1648 logic cells
+    Info (21064): Implemented 64 RAM segments
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 9 warnings
+    Info: Peak virtual memory: 4844 megabytes
+    Info: Processing ended: Wed Jun 26 08:38:25 2024
+    Info: Elapsed time: 00:00:12
+    Info: Total CPU time (on all processors): 00:00:25
+
+
